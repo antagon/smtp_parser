@@ -42,9 +42,9 @@ enum
 	SMTP_EARGNIMPL = 504
 };
 
-struct smtp_req_arg
+struct smtp_arg_val
 {
-	const char *val;
+	const char *str;
 	size_t len;
 };
 
@@ -56,7 +56,7 @@ struct smtp_arg
 	int complete;
 	size_t argc;
 #define SMTP_ARGS_MAX 4
-	struct smtp_req_arg argv[SMTP_ARGS_MAX];
+	struct smtp_arg_val argv[SMTP_ARGS_MAX];
 };
 
 // The structure is available to programmer as a mean to create bond between particular SMTP command and his callback function.

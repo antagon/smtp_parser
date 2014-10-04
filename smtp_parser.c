@@ -52,7 +52,7 @@ _parser_on_word_cb (struct parser *parser, const char *buff, size_t len)
 		case SMTP_C_RCPTTO:
 		case SMTP_C_VRFY:
 		case SMTP_C_UNKNOWN:
-			arg->argv[arg->argc].val = buff;
+			arg->argv[arg->argc].str = buff;
 			arg->argv[arg->argc].len = len;
 			arg->argc++;
 			break;
